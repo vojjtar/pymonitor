@@ -5,7 +5,13 @@ import systemInfo
 
 REFRESH_SPEED = 1
 
-clear = lambda: os.system('clear')
+clr = ''
+if platform.system() == 'Windows':
+    clr = 'cls'
+else:
+    clr = 'clear'
+
+clear = lambda: os.system(clr)
 clear()
 
 pymonitorLogo = (r"""
