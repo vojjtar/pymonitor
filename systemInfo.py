@@ -8,6 +8,7 @@ def getBasicSystemInfo():
         for line in systemCPUallInfo.split("\n"):
             if "model name" in line:
                 systemCPU = re.sub(".*model name.*:", "", line, 1)
+                break
             else:
                 systemCPU = 'unknown'
             if "cpu cores" in line:
@@ -17,6 +18,7 @@ def getBasicSystemInfo():
                 systemCPUcores = str(psutil.cpu_count(logical=False))
             if "siblings" in line:
                 systemCPUthreads = re.sub(".*siblings.*:", "", line, 1)
+                break
             else:
                 systemCPUthreads = str(psutil.cpu_count())
         command = 'cat /etc/os-release'
