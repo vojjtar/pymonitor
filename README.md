@@ -1,5 +1,5 @@
 # pymonitor
-#### Simple system monitoring terminal monitor written in Python 🐍
+#### Simple system monitoring terminal tool written in Python 🐍
 
 ![img](https://i.imgur.com/IYnv9fb.png "Logo Title Text 1")
 
